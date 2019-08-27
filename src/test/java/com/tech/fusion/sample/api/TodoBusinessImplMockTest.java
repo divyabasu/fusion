@@ -22,6 +22,7 @@ public class TodoBusinessImplMockTest {
 
     // Creates a mock object of a class or an interface
     TodoService mockTodoService = mock(TodoService.class);
+    // Dynamically stubbing a method
     // if not stubbed , default values are returned
     when(mockTodoService.retrieveTodoList("Dummy")).thenReturn(todoList);
 
