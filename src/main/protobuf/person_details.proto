@@ -8,6 +8,9 @@ syntax = "proto3";
 // The package specifier is used to prevent clashes between protocol buffer messages of same name.
 package com.data.model;
 
+// import a protobuf file into another
+import "address_details.proto";
+
 // Used to define the package in which the java classes will be generated.
 option java_package = "com.data.model.person";
 // Used to define the outer java class name.
@@ -20,6 +23,8 @@ message Person {
     string email = 3;
     // Other message Type : https://developers.google.com/protocol-buffers/docs/proto3#other
     repeated PhoneNumber phone = 4;
+    // Defining a map in the data definition : https://developers.google.com/protocol-buffers/docs/proto3#maps
+    map<string, Address> projects = 5;
 }
 
 // Enumerations : Ensure that the field having type PhoneType will have only predefined list of values
