@@ -1,5 +1,5 @@
 /*
-* This line speficies that proto3 syntax is being used while defining the
+* This line specifies that proto3 syntax is being used while defining the
 * structure of the information. If this line is not used the compiler assumes
 * proto2 syntax is being used.
 */

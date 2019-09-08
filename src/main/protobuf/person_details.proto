@@ -1,5 +1,5 @@
 /*
-* This line speficies that proto3 syntax is being used while defining the
+* This line specifies that proto3 syntax is being used while defining the
 * structure of the information. If this line is not used the compiler assumes
 * proto2 syntax is being used.
 */
@@ -22,9 +22,11 @@ message Person {
     int32 id = 2;
     string email = 3;
     // Other message Type : https://developers.google.com/protocol-buffers/docs/proto3#other
-    repeated PhoneNumber phone = 4;
+    repeated PhoneNumber contact_numbers = 4;
     // Defining a map in the data definition : https://developers.google.com/protocol-buffers/docs/proto3#maps
-    map<string, Address> projects = 5;
+    map<string, Address> address_list = 5;
+    string pan_number = 6 [deprecated=true];
+    string ssn = 7;
 }
 
 // Enumerations : Ensure that the field having type PhoneType will have only predefined list of values
